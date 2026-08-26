@@ -273,12 +273,29 @@ a { color: inherit; text-decoration: none; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.06);
-  animation: kenburns 9s ease forwards;
+  transform-origin: center center;
+  will-change: transform;
 }
-@keyframes kenburns {
-  from { transform: scale(1.06); }
-  to { transform: scale(1); }
+.hero-slide:nth-child(3n+1) img { animation: kb-pan-1 6.5s ease-out forwards; }
+.hero-slide:nth-child(3n+2) img { animation: kb-pan-2 6.5s ease-out forwards; }
+.hero-slide:nth-child(3n) img { animation: kb-pan-3 6.5s ease-out forwards; }
+@keyframes kb-pan-1 {
+  from { transform: scale(1.18) translate(2%, -2%); }
+  to { transform: scale(1.02) translate(0, 0); }
+}
+@keyframes kb-pan-2 {
+  from { transform: scale(1.18) translate(-2.5%, 1.5%); }
+  to { transform: scale(1.02) translate(0, 0); }
+}
+@media (max-width: 760px) {
+  @keyframes kb-pan-2 {
+    from { transform: scale(1.28) translateX(1.5%); }
+    to { transform: scale(1.28) translateX(-1.5%); }
+  }
+}
+@keyframes kb-pan-3 {
+  from { transform: scale(1.2) translate(0, 2.5%); }
+  to { transform: scale(1.02) translate(0, 0); }
 }
 .hero::after {
   content: '';

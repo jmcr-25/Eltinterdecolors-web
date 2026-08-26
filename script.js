@@ -188,8 +188,8 @@
         }
 
         container.appendChild(head);
-        container.appendChild(gallery);
         section.appendChild(container);
+        section.appendChild(gallery);
         return section;
       });
     });
@@ -259,6 +259,11 @@
       current = (index + slides.length) % slides.length;
       slides[current].classList.add('is-active');
       dots[current].classList.add('is-active');
+      // Restart the pan/zoom animation each time a slide comes back into view.
+      var img = slides[current].querySelector('img');
+      img.style.animation = 'none';
+      void img.offsetHeight;
+      img.style.animation = '';
     }
     function nextSlide() { showSlide(current + 1); }
     function startHero() {
