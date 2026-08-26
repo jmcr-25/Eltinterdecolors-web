@@ -11,11 +11,11 @@
     "ctaPrimaryLabel": "Contacta conmigo",
     "ctaSecondaryLabel": "Ver portfolio",
     "slides": [
-      { "image": "assets/uploads/Singswingcompany_2022-46-scaled.jpg", "focus": "center", "effect": "zoom-in" },
-      { "image": "assets/uploads/Noelia-2-2025-scaled.jpg", "focus": "30% center", "effect": "zoom-in" },
-      { "image": "assets/uploads/rebeca3.webp", "focus": "center", "effect": "zoom-out" },
-      { "image": "assets/uploads/mirada_mano-1-scaled.jpg", "focus": "top right", "effect": "zoom-in" },
-      { "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg", "focus": "center", "effect": "pan-left" }
+      { "photo": { "image": "assets/uploads/Singswingcompany_2022-46-scaled.jpg", "focus": "50% 50%", "effect": "zoom-in" } },
+      { "photo": { "image": "assets/uploads/Noelia-2-2025-scaled.jpg", "focus": "30% 50%", "effect": "zoom-in" } },
+      { "photo": { "image": "assets/uploads/rebeca3.webp", "focus": "50% 50%", "effect": "zoom-out" } },
+      { "photo": { "image": "assets/uploads/mirada_mano-1-scaled.jpg", "focus": "100% 0%", "effect": "zoom-in" } },
+      { "photo": { "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg", "focus": "50% 50%", "effect": "pan-left" } }
     ]
   },
   "philosophy": {

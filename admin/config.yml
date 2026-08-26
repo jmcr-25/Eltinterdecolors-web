@@ -40,34 +40,7 @@ collections:
               - label: "Fotos del carrusel"
                 name: "slides"
                 widget: "list"
-                summary: "{{fields.image}}"
-                fields:
-                  - { label: "Imagen", name: "image", widget: "image" }
-                  - label: "Punto de enfoque"
-                    name: "focus"
-                    widget: "select"
-                    default: "center"
-                    hint: "Qué parte de la foto se mantiene visible en pantallas estrechas (móvil)."
-                    options:
-                      - { label: "Centro", value: "center" }
-                      - { label: "Arriba", value: "top" }
-                      - { label: "Abajo", value: "bottom" }
-                      - { label: "Izquierda", value: "left" }
-                      - { label: "Derecha", value: "right" }
-                      - { label: "Arriba izquierda", value: "top left" }
-                      - { label: "Arriba derecha", value: "top right" }
-                      - { label: "Abajo izquierda", value: "bottom left" }
-                      - { label: "Abajo derecha", value: "bottom right" }
-                  - label: "Efecto de movimiento"
-                    name: "effect"
-                    widget: "select"
-                    default: "zoom-in"
-                    options:
-                      - { label: "Acercar (zoom in)", value: "zoom-in" }
-                      - { label: "Alejar (zoom out)", value: "zoom-out" }
-                      - { label: "Paneo a la izquierda", value: "pan-left" }
-                      - { label: "Paneo a la derecha", value: "pan-right" }
-                      - { label: "Sin movimiento", value: "none" }
+                field: { label: "Foto", name: "photo", widget: "heroPhoto" }
 
           - label: "Frase destacada"
             name: "philosophy"

@@ -11,6 +11,132 @@
     CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap');
     CMS.registerPreviewStyle('/styles.css');
 
+    /* =========================================================
+       Custom widget: pick a hero photo, click on it to set the
+       focus point (what stays centered on narrow/mobile screens),
+       and choose its Ken Burns effect — all in one control.
+       ========================================================= */
+    var HeroPhotoControl = createClass({
+      getCurrent: function () {
+        var v = this.props.value;
+        var obj = v && typeof v.toJS === 'function' ? v.toJS() : (v || {});
+        return {
+          image: obj.image || '',
+          focus: obj.focus || '50% 50%',
+          effect: obj.effect || 'zoom-in'
+        };
+      },
+      handleChooseImage: function () {
+        this._controlID = this._controlID || ('heroPhoto_' + Math.random().toString(36).slice(2));
+        this.props.onOpenMediaLibrary({ controlID: this._controlID, forImage: true });
+      },
+      componentDidUpdate: function (prevProps) {
+        if (!this._controlID || !this.props.mediaPaths) return;
+        var newPath = this.props.mediaPaths.get(this._controlID);
+        var oldPath = prevProps.mediaPaths ? prevProps.mediaPaths.get(this._controlID) : undefined;
+        if (newPath && newPath !== oldPath) {
+          var current = this.getCurrent();
+          current.image = newPath;
+          this.props.onChange(current);
+          if (this.props.onClearMediaLibrary) this.props.onClearMediaLibrary(this._controlID);
+        }
+      },
+      handleImageClick: function (e) {
+        var rect = e.currentTarget.getBoundingClientRect();
+        var x = Math.round(((e.clientX - rect.left) / rect.width) * 100);
+        var y = Math.round(((e.clientY - rect.top) / rect.height) * 100);
+        x = Math.max(0, Math.min(100, x));
+        y = Math.max(0, Math.min(100, y));
+        var current = this.getCurrent();
+        current.focus = x + '% ' + y + '%';
+        this.props.onChange(current);
+      },
+      handleEffectChange: function (e) {
+        var current = this.getCurrent();
+        current.effect = e.target.value;
+        this.props.onChange(current);
+      },
+      handlePathInput: function (e) {
+        var current = this.getCurrent();
+        current.image = e.target.value;
+        this.props.onChange(current);
+      },
+      render: function () {
+        var current = this.getCurrent();
+        // this.props.getAsset() returns a tiny placeholder icon inside custom
+        // widget controls in this Decap version — build the real static-file
+        // URL directly instead (our images are plain committed files).
+        var imgUrl = current.image
+          ? (/^https?:\/\//.test(current.image) ? current.image : '/' + current.image.replace(/^\/+/, ''))
+          : null;
+        var nums = current.focus.replace(/%/g, '').trim().split(/\s+/);
+        var fx = parseFloat(nums[0]);
+        var fy = parseFloat(nums[1]);
+        if (isNaN(fx)) fx = 50;
+        if (isNaN(fy)) fy = 50;
+
+        return h('div', { style: { border: '1px solid #d8d8d8', borderRadius: '8px', padding: '14px', background: '#fafafa' } },
+          h('button', {
+            type: 'button',
+            onClick: this.handleChooseImage,
+            style: { marginBottom: '10px', padding: '7px 14px', cursor: 'pointer', borderRadius: '6px', border: '1px solid #999', background: '#fff' }
+          }, current.image ? 'Cambiar imagen' : 'Elegir imagen'),
+          h('input', {
+            type: 'text',
+            placeholder: 'o pega aquí la ruta, ej. assets/uploads/foto.jpg',
+            value: current.image,
+            onChange: this.handlePathInput,
+            style: { display: 'block', width: '100%', maxWidth: '420px', marginBottom: '10px', padding: '6px', fontSize: '12px', borderRadius: '6px', border: '1px solid #ccc' }
+          }),
+
+          imgUrl
+            ? h('div', {},
+                h('div', {
+                  onClick: this.handleImageClick,
+                  style: { position: 'relative', cursor: 'crosshair', maxWidth: '420px', userSelect: 'none' }
+                },
+                  h('img', { src: imgUrl, draggable: false, style: { width: '100%', display: 'block', borderRadius: '4px' } }),
+                  h('div', {
+                    style: {
+                      position: 'absolute', left: fx + '%', top: fy + '%',
+                      width: '20px', height: '20px', marginLeft: '-10px', marginTop: '-10px',
+                      borderRadius: '50%', border: '3px solid #fff',
+                      background: '#c1502e', boxShadow: '0 0 0 1px rgba(0,0,0,0.5), 0 2px 6px rgba(0,0,0,0.4)',
+                      pointerEvents: 'none'
+                    }
+                  })
+                ),
+                h('p', { style: { fontSize: '12px', color: '#777', marginTop: '6px' } },
+                  'Haz clic en la foto para marcar qué punto se mantiene siempre visible, incluso en pantallas estrechas (móvil).'
+                )
+              )
+            : h('p', { style: { color: '#888' } }, 'Elige una imagen para poder marcar el punto de enfoque.'),
+
+          h('label', { style: { display: 'block', marginTop: '14px', fontSize: '13px', fontWeight: 600, color: '#333' } }, 'Efecto de movimiento'),
+          h('select', {
+            value: current.effect,
+            onChange: this.handleEffectChange,
+            style: { padding: '7px', marginTop: '4px', borderRadius: '6px', border: '1px solid #999' }
+          },
+            h('option', { value: 'zoom-in' }, 'Acercar (zoom in)'),
+            h('option', { value: 'zoom-out' }, 'Alejar (zoom out)'),
+            h('option', { value: 'pan-left' }, 'Paneo a la izquierda'),
+            h('option', { value: 'pan-right' }, 'Paneo a la derecha'),
+            h('option', { value: 'none' }, 'Sin movimiento')
+          )
+        );
+      }
+    });
+
+    var HeroPhotoPreview = createClass({
+      render: function () { return null; }
+    });
+
+    CMS.registerWidget('heroPhoto', HeroPhotoControl, HeroPhotoPreview);
+
+    /* =========================================================
+       Live preview of the whole page, with a desktop/mobile toggle.
+       ========================================================= */
     var GeneralPreview = createClass({
       getInitialState: function () {
         return { device: 'desktop' };
@@ -25,12 +151,23 @@
           return v === undefined || v === null ? (fallback || '') : v;
         };
         var slides = data.getIn(['hero', 'slides']);
-        var firstSlide = slides && slides.size ? slides.get(0) : null;
-        var heroImage = firstSlide ? this.props.getAsset(firstSlide.get('image')) : null;
-        var heroFocus = firstSlide ? firstSlide.get('focus') || 'center' : 'center';
+        var firstSlide = (slides && slides.size && typeof slides.get(0).get === 'function') ? slides.get(0) : null;
+        var firstPhoto = firstSlide ? (firstSlide.get('photo') || firstSlide) : null;
+        var heroImage = (firstPhoto && typeof firstPhoto.get === 'function' && firstPhoto.get('image'))
+          ? this.props.getAsset(firstPhoto.get('image')) : null;
+        var heroFocus = (firstPhoto && typeof firstPhoto.get === 'function') ? (firstPhoto.get('focus') || 'center') : 'center';
         var paragraphs = data.getIn(['about', 'paragraphs']);
         var firstParagraph = paragraphs && paragraphs.size ? paragraphs.get(0) : '';
         var isMobile = this.state.device === 'mobile';
+
+        // The real site sizes hero text with vw-based clamp(), which reads the
+        // browser's true width — not this simulated frame — so it renders far
+        // too large here. Override with fixed sizes while previewing "mobile".
+        var mobileTextFix = isMobile ? {
+          kicker: { fontSize: '0.62rem' },
+          h1: { fontSize: '1.9rem', lineHeight: 1.15 },
+          p: { fontSize: '0.9rem' }
+        } : { kicker: {}, h1: {}, p: {} };
 
         var toggleBar = h('div', {
           style: {
@@ -82,18 +219,18 @@
               }
             }) : null,
             h('div', { className: 'hero-content' },
-              h('span', { className: 'kicker' }, get(['hero', 'kicker'])),
-              h('h1', {},
+              h('span', { className: 'kicker', style: mobileTextFix.kicker }, get(['hero', 'kicker'])),
+              h('h1', { style: mobileTextFix.h1 },
                 get(['hero', 'title']) + ' ',
                 h('em', { style: { fontStyle: 'italic' } }, get(['hero', 'titleEmphasis'])),
                 '.'
               ),
-              h('p', {}, get(['hero', 'subtitle']))
+              h('p', { style: mobileTextFix.p }, get(['hero', 'subtitle']))
             )
           ),
           h('section', { className: 'philosophy' },
             h('div', { className: 'container' },
-              h('blockquote', {},
+              h('blockquote', { style: isMobile ? { fontSize: '1.25rem' } : {} },
                 get(['philosophy', 'quoteBefore']),
                 h('span', {}, get(['philosophy', 'quoteHighlight'])),
                 get(['philosophy', 'quoteAfter'])
@@ -105,7 +242,7 @@
             h('div', { className: 'container' },
               h('div', { className: 'section-head' },
                 h('span', { className: 'kicker' }, get(['portfolioIntro', 'kicker'])),
-                h('h2', {}, get(['portfolioIntro', 'title'])),
+                h('h2', { style: isMobile ? { fontSize: '1.6rem' } : {} }, get(['portfolioIntro', 'title'])),
                 h('p', {}, get(['portfolioIntro', 'description']))
               )
             )
@@ -114,7 +251,7 @@
             h('div', { className: 'container' },
               h('div', { className: 'section-head' },
                 h('span', { className: 'kicker' }, get(['about', 'kicker'])),
-                h('h2', {}, get(['about', 'title'])),
+                h('h2', { style: isMobile ? { fontSize: '1.6rem' } : {} }, get(['about', 'title'])),
                 h('p', {}, firstParagraph)
               )
             )
@@ -123,7 +260,7 @@
             h('div', { className: 'container' },
               h('div', { className: 'section-head center' },
                 h('span', { className: 'kicker' }, get(['contact', 'kicker'])),
-                h('h2', {}, get(['contact', 'title'])),
+                h('h2', { style: isMobile ? { fontSize: '1.6rem' } : {} }, get(['contact', 'title'])),
                 h('p', {}, get(['contact', 'description']))
               )
             )

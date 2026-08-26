@@ -44,13 +44,14 @@
     var slidesWrap = document.getElementById('heroSlides');
     var dotsWrap = document.getElementById('heroDots');
     data.hero.slides.forEach(function (slide, i) {
+      var photo = slide.photo || slide;
       var div = document.createElement('div');
       div.className = 'hero-slide' + (i === 0 ? ' is-active' : '');
       var img = document.createElement('img');
-      img.src = slide.image;
+      img.src = photo.image;
       img.alt = '';
-      img.style.objectPosition = slide.focus || 'center';
-      img.className = 'fx-' + (slide.effect || 'zoom-in');
+      img.style.objectPosition = photo.focus || 'center';
+      img.className = 'fx-' + (photo.effect || 'zoom-in');
       if (i === 0) img.loading = 'eager';
       div.appendChild(img);
       slidesWrap.appendChild(div);
