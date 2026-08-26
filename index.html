@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juanma Cuevas — Fotógrafo de retrato en Vilanova i la Geltrú</title>
+<meta name="description" content="Fotografía de retrato con mirada natural. Sesiones para adolescentes, estudio y eventos en Vilanova i la Geltrú y el Garraf, desde 2011.">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=7">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Ir al contenido</a>
+
+<!-- ===================== HEADER ===================== -->
+<header class="site-header" id="siteHeader">
+  <a href="#inicio" class="logo-link" aria-label="El Tinter de Colors — Inicio">
+    <img src="assets/logo.svg" alt="El Tinter de Colors — Juanma Cuevas">
+  </a>
+
+  <nav class="nav-desktop" aria-label="Navegación principal">
+    <ul>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#sobre-mi">Sobre mí</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <a href="#" class="btn btn-ghost-light" target="_blank" rel="noopener" data-field="whatsappLink">WhatsApp</a>
+  </nav>
+
+  <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="navMobile">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- ===================== MOBILE NAV ===================== -->
+<nav class="nav-mobile" id="navMobile" aria-label="Navegación móvil">
+  <ul>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#sobre-mi">Sobre mí</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <div class="nav-mobile-contact">
+    <span class="ink-dots"><span></span><span></span><span></span></span>
+    <a href="#" target="_blank" rel="noopener" data-field="whatsappLink" data-text="whatsappNumber"></a>
+    <a href="#" data-field="emailLink" data-text="email"></a>
+    <a href="#" target="_blank" rel="noopener" data-field="instagramLink" data-text="instagramHandle"></a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="inicio">
+    <div class="hero-slides" id="heroSlides"></div>
+
+    <div class="hero-content">
+      <span class="kicker" data-text="hero.kicker"></span>
+      <h1><span data-text="hero.title"></span> <em style="font-style:italic;" data-text="hero.titleEmphasis"></em>.</h1>
+      <p data-text="hero.subtitle"></p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-accent" data-text="hero.ctaPrimaryLabel"></a>
+        <a href="#portfolio" class="btn btn-ghost-light" data-text="hero.ctaSecondaryLabel"></a>
+      </div>
+    </div>
+
+    <div class="hero-dots" id="heroDots"></div>
+
+    <div class="scroll-cue"><span class="line"></span> Scroll</div>
+  </section>
+
+  <!-- ===================== PHILOSOPHY ===================== -->
+  <section class="philosophy">
+    <div class="container reveal">
+      <blockquote id="philosophyQuote"></blockquote>
+      <cite data-text="philosophy.cite"></cite>
+    </div>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section class="section-pad" id="portfolio">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker" data-text="portfolioIntro.kicker"></span>
+        <h2 data-text="portfolioIntro.title"></h2>
+        <p data-text="portfolioIntro.description"></p>
+      </div>
+
+      <div class="filters reveal" id="portfolioFilters"></div>
+    </div>
+  </section>
+
+  <!-- Category sections are injected here by script.js -->
+  <div id="categorySections"></div>
+
+  <!-- ===================== SOBRE MI ===================== -->
+  <section class="section-pad about" id="sobre-mi">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-media reveal">
+          <span class="frame-tag" data-text="about.imageBadge"></span>
+          <img id="aboutImage" src="" alt="">
+        </div>
+        <div class="about-copy reveal">
+          <span class="kicker" data-text="about.kicker"></span>
+          <h2 data-text="about.title"></h2>
+          <div id="aboutParagraphs"></div>
+          <a href="#contacto" class="btn btn-outline" data-text="about.ctaLabel"></a>
+
+          <div class="stat-row" id="aboutStats"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO ===================== -->
+  <section class="section-pad contact" id="contacto">
+    <div class="container">
+      <div class="section-head center reveal">
+        <span class="kicker" data-text="contact.kicker"></span>
+        <h2 data-text="contact.title"></h2>
+        <p data-text="contact.description"></p>
+      </div>
+
+      <div class="contact-grid reveal">
+        <a class="contact-card" href="#" target="_blank" rel="noopener" data-field="whatsappLink">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.001 2C6.478 2 2 6.477 2 12c0 1.986.583 3.837 1.588 5.396L2 22l4.746-1.556A9.94 9.94 0 0 0 12 22c5.522 0 10-4.477 10-10S17.523 2 12.001 2zm0 18.06a8.03 8.03 0 0 1-4.31-1.25l-.31-.184-3.194 1.047 1.06-3.11-.2-.318A8.05 8.05 0 1 1 20.05 12c0 4.445-3.605 8.06-8.049 8.06z"/></svg>
+          </span>
+          <h3>WhatsApp</h3>
+          <p data-text="contact.whatsappNumber"></p>
+          <span class="link-out">Escríbeme
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </span>
+        </a>
+
+        <a class="contact-card" href="#" data-field="emailLink">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><polyline points="22 6 12 13 2 6"/></svg>
+          </span>
+          <h3>Email</h3>
+          <p data-text="contact.email"></p>
+          <span class="link-out">Enviar correo
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </span>
+        </a>
+
+        <a class="contact-card" href="#" target="_blank" rel="noopener" data-field="instagramLink">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <h3>Instagram</h3>
+          <p data-text="contact.instagramHandle"></p>
+          <span class="link-out">Seguir
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </span>
+        </a>
+
+        <a class="contact-card" href="#" target="_blank" rel="noopener" data-field="mapsLink">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          <h3>Estudio</h3>
+          <p id="contactAddress"></p>
+          <span class="link-out">Cómo llegar
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M7 7h10v10"/></svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <span class="ink-dots"><span></span><span></span><span></span></span>
+      <div data-text="footer.copyright"></div>
+    </div>
+    <div class="footer-social">
+      <a href="#" target="_blank" rel="noopener" data-field="instagramLink">Instagram</a>
+      <a href="#" target="_blank" rel="noopener" data-field="whatsappLink">WhatsApp</a>
+      <a href="#" data-field="emailLink">Email</a>
+    </div>
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+    </button>
+  </div>
+</footer>
+
+<!-- ===================== LIGHTBOX ===================== -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Cerrar">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6 6 18"/></svg>
+  </button>
+  <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Anterior">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+  </button>
+  <div class="lightbox-img-wrap">
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-caption" id="lightboxCaption"></div>
+  </div>
+  <button class="lightbox-nav next" id="lightboxNext" aria-label="Siguiente">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+</div>
+
+<script src="script.js?v=3"></script>
+</body>
+</html>

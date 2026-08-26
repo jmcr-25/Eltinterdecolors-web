@@ -1,0 +1,127 @@
+backend:
+  name: git-gateway
+  branch: main
+  # Tu web vive en Webempresa, no en Netlify. Netlify solo se usa aquí como
+  # servicio de login (Identity + Git Gateway) para este panel.
+  # Sustituye la URL de abajo por la de tu sitio de Netlify en cuanto lo crees,
+  # por ejemplo: https://el-tinter-admin.netlify.app
+  base_url: https://SUSTITUYE-ESTO.netlify.app
+
+local_backend: true
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "site"
+    label: "Contenido de la web"
+    files:
+      - name: "general"
+        label: "Contenido general"
+        file: "content/site.json"
+        fields:
+          - label: "Meta (pestaña del navegador)"
+            name: "meta"
+            widget: "object"
+            fields:
+              - { label: "Título de la pestaña", name: "title", widget: "string" }
+              - { label: "Descripción (SEO)", name: "description", widget: "text" }
+
+          - label: "Portada (hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño superior", name: "kicker", widget: "string" }
+              - { label: "Título principal", name: "title", widget: "string" }
+              - { label: "Palabra final en cursiva", name: "titleEmphasis", widget: "string" }
+              - { label: "Subtítulo", name: "subtitle", widget: "text" }
+              - { label: "Texto botón principal", name: "ctaPrimaryLabel", widget: "string" }
+              - { label: "Texto botón secundario", name: "ctaSecondaryLabel", widget: "string" }
+              - label: "Fotos del carrusel"
+                name: "slides"
+                widget: "list"
+                summary: "{{fields.image}}"
+                fields:
+                  - { label: "Imagen", name: "image", widget: "image" }
+
+          - label: "Frase destacada"
+            name: "philosophy"
+            widget: "object"
+            fields:
+              - { label: "Texto antes de la palabra destacada", name: "quoteBefore", widget: "string" }
+              - { label: "Palabra destacada", name: "quoteHighlight", widget: "string" }
+              - { label: "Texto después", name: "quoteAfter", widget: "string" }
+              - { label: "Firma", name: "cite", widget: "string" }
+
+          - label: "Introducción del portfolio"
+            name: "portfolioIntro"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño superior", name: "kicker", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+
+          - label: "Categorías del portfolio"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Identificador (sin espacios ni acentos, ej. adolescentes)", name: "id", widget: "string" }
+              - { label: "Título de la categoría", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "Texto del botón", name: "ctaLabel", widget: "string" }
+              - { label: "Fondo ligeramente distinto", name: "altBackground", widget: "boolean", default: false }
+              - label: "Fotos de esta categoría"
+                name: "photos"
+                widget: "list"
+                summary: "{{fields.phrase}}"
+                fields:
+                  - { label: "Imagen", name: "image", widget: "image" }
+                  - { label: "Texto alternativo (accesibilidad)", name: "alt", widget: "string", required: false }
+                  - { label: "Frase corta (aparece al pasar el ratón)", name: "phrase", widget: "string", required: false }
+
+          - label: "Sobre mí"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño superior", name: "kicker", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - label: "Párrafos"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Párrafo", name: "paragraph", widget: "text" }
+              - { label: "Texto del botón", name: "ctaLabel", widget: "string" }
+              - { label: "Foto", name: "image", widget: "image" }
+              - { label: "Texto alternativo de la foto", name: "imageAlt", widget: "string" }
+              - { label: "Insignia sobre la foto (ej. Desde 2011)", name: "imageBadge", widget: "string" }
+              - label: "Estadísticas"
+                name: "stats"
+                widget: "list"
+                summary: "{{fields.number}} — {{fields.label}}"
+                fields:
+                  - { label: "Número", name: "number", widget: "string" }
+                  - { label: "Texto", name: "label", widget: "string" }
+
+          - label: "Contacto"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Texto pequeño superior", name: "kicker", widget: "string" }
+              - { label: "Título", name: "title", widget: "string" }
+              - { label: "Descripción", name: "description", widget: "text" }
+              - { label: "WhatsApp — número a mostrar", name: "whatsappNumber", widget: "string" }
+              - { label: "WhatsApp — enlace (https://wa.me/...)", name: "whatsappLink", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Instagram — usuario a mostrar", name: "instagramHandle", widget: "string" }
+              - { label: "Instagram — enlace", name: "instagramLink", widget: "string" }
+              - { label: "Dirección — línea 1", name: "addressLine1", widget: "string" }
+              - { label: "Dirección — línea 2", name: "addressLine2", widget: "string" }
+              - { label: "Enlace de Google Maps", name: "mapsLink", widget: "string" }
+
+          - label: "Pie de página"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Texto de copyright", name: "copyright", widget: "string" }
