@@ -3,9 +3,7 @@ backend:
   branch: main
   # Tu web vive en Webempresa, no en Netlify. Netlify solo se usa aquí como
   # servicio de login (Identity + Git Gateway) para este panel.
-  # Sustituye la URL de abajo por la de tu sitio de Netlify en cuanto lo crees,
-  # por ejemplo: https://el-tinter-admin.netlify.app
-  base_url: https://SUSTITUYE-ESTO.netlify.app
+  base_url: https://stunning-cobbler-736204.netlify.app
 
 local_backend: true
 
