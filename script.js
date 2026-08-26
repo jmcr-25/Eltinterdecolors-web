@@ -202,6 +202,40 @@
   }
 
   function initInteractive() {
+    /* ---------- Contact form (Netlify Forms, submitted via fetch) ---------- */
+    var contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var statusEl = document.getElementById('formStatus');
+        var submitBtn = contactForm.querySelector('button[type="submit"]');
+        var data = new FormData(contactForm);
+        var body = Array.prototype.map.call(Array.from(data.entries()), function (pair) {
+          return encodeURIComponent(pair[0]) + '=' + encodeURIComponent(pair[1]);
+        }).join('&');
+
+        submitBtn.disabled = true;
+        statusEl.textContent = 'Enviando…';
+        statusEl.className = 'form-status';
+
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: body
+        }).then(function (res) {
+          if (!res.ok) throw new Error('Request failed');
+          statusEl.textContent = 'Gracias, te responderé lo antes posible.';
+          statusEl.className = 'form-status is-success';
+          contactForm.reset();
+        }).catch(function () {
+          statusEl.textContent = 'Algo ha fallado. Escríbeme directamente por WhatsApp o email.';
+          statusEl.className = 'form-status is-error';
+        }).finally(function () {
+          submitBtn.disabled = false;
+        });
+      });
+    }
+
     /* ---------- Header scroll state ---------- */
     var header = document.getElementById('siteHeader');
     function onScroll() {

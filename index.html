@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=8">
 </head>
 <body>
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -185,6 +185,27 @@
           </span>
         </a>
       </div>
+
+      <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form reveal" id="contactForm">
+        <input type="hidden" name="form-name" value="contacto">
+        <p class="hp-field"><label>No rellenar si eres humano: <input name="bot-field"></label></p>
+
+        <div class="form-row">
+          <label for="cf-name">Nombre</label>
+          <input type="text" id="cf-name" name="nombre" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" required>
+        </div>
+        <div class="form-row">
+          <label for="cf-message">Mensaje</label>
+          <textarea id="cf-message" name="mensaje" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-accent">Enviar</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
     </div>
   </section>
 
@@ -225,6 +246,6 @@
   </button>
 </div>
 
-<script src="script.js?v=4"></script>
+<script src="script.js?v=5"></script>
 </body>
 </html>
