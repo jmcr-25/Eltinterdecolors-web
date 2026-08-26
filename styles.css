@@ -288,10 +288,10 @@ a { color: inherit; text-decoration: none; }
   to { transform: scale(1.02) translate(0, 0); }
 }
 @media (max-width: 760px) {
-  .hero-slide:nth-child(2) img { object-position: 75% center; }
+  .hero-slide:nth-child(2) img { object-position: center center; }
   @keyframes kb-pan-2 {
-    from { transform: scale(1.1) translateX(0.8%); }
-    to { transform: scale(1.1) translateX(-0.8%); }
+    from { transform: scale(1.12); }
+    to { transform: scale(1.02); }
   }
 }
 @keyframes kb-pan-3 {
