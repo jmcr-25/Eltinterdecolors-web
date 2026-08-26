@@ -11,11 +11,31 @@
     "ctaPrimaryLabel": "Contacta conmigo",
     "ctaSecondaryLabel": "Ver portfolio",
     "slides": [
-      { "image": "assets/uploads/Singswingcompany_2022-46-scaled.jpg", "focus": "center", "effect": "zoom-in" },
-      { "image": "assets/uploads/Noelia-2-2025-scaled.jpg", "focus": "30% center", "effect": "zoom-in" },
-      { "image": "assets/uploads/rebeca3.webp", "focus": "center", "effect": "zoom-out" },
-      { "image": "assets/uploads/mirada_mano-1-scaled.jpg", "focus": "top right", "effect": "zoom-in" },
-      { "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg", "focus": "center", "effect": "pan-left" }
+      {
+        "image": "assets/uploads/Singswingcompany_2022-46-scaled.jpg",
+        "focus": "center",
+        "effect": "zoom-in"
+      },
+      {
+        "image": "assets/uploads/Noelia-2-2025-scaled.jpg",
+        "focus": "30% center",
+        "effect": "zoom-in"
+      },
+      {
+        "image": "assets/uploads/rebeca3.webp",
+        "focus": "center",
+        "effect": "zoom-out"
+      },
+      {
+        "image": "assets/uploads/mirada_mano-1-scaled.jpg",
+        "focus": "top right",
+        "effect": "zoom-in"
+      },
+      {
+        "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg",
+        "focus": "left",
+        "effect": "pan-left"
+      }
     ]
   },
   "philosophy": {
@@ -37,24 +57,96 @@
       "ctaLabel": "Reserva tu sesión",
       "altBackground": false,
       "photos": [
-        { "image": "assets/uploads/JMC1596_1-scaled.jpg", "alt": "Retrato de adolescente en estudio", "phrase": "Mirada directa" },
-        { "image": "assets/uploads/xula-2-scaled.jpg", "alt": "Retrato natural de adolescente", "phrase": "Luz de tarde" },
-        { "image": "assets/uploads/berta1-scaled.jpg", "alt": "Retrato de adolescente", "phrase": "Sin poses" },
-        { "image": "assets/uploads/ninos1-1-scaled.jpg", "alt": "Sesión de fotos de niños", "phrase": "Complicidad" },
-        { "image": "assets/uploads/JMC1619-scaled.jpg", "alt": "Retrato de adolescente al aire libre", "phrase": "Retrato al aire libre" },
-        { "image": "assets/uploads/JMC1631_1-1_1-scaled.jpg", "alt": "Retrato espontáneo de adolescente", "phrase": "Instante espontáneo" },
-        { "image": "assets/uploads/Ninos-1-scaled.jpg", "alt": "Sesión familiar con hermanos", "phrase": "En familia" },
-        { "image": "assets/uploads/JMC1650-scaled.jpg", "alt": "Retrato de adolescente con luz natural", "phrase": "Luz natural" },
-        { "image": "assets/uploads/acostada_pelo-1-scaled.jpg", "alt": "Detalle de retrato de adolescente", "phrase": "Detalle y textura" },
-        { "image": "assets/uploads/mirada_mano-1-scaled.jpg", "alt": "Retrato con gesto espontáneo", "phrase": "Gesto espontáneo" },
-        { "image": "assets/uploads/Caucasian-girl-stretched-with-her-hand-on-her-head-and-eyes-closed-curly-hair-scaled.jpg", "alt": "Retrato de adolescente estirándose", "phrase": "Estiramiento" },
-        { "image": "assets/uploads/Sesion_Rafa-scaled.jpg", "alt": "Retrato sereno de adolescente", "phrase": "Retrato sereno" },
-        { "image": "assets/uploads/JMC5385.jpg", "alt": "Sesión de retrato 2025", "phrase": "Sesión 2025" },
-        { "image": "assets/uploads/JMC5416.jpg", "alt": "Retrato con expresión natural", "phrase": "Expresión natural" },
-        { "image": "assets/uploads/JMC5395.jpg", "alt": "Retrato en movimiento", "phrase": "En movimiento" },
-        { "image": "assets/uploads/JMC5478_1.jpg", "alt": "Retrato mirando al frente", "phrase": "Mirada al frente" },
-        { "image": "assets/uploads/JMC5489.jpg", "alt": "Escena cotidiana de sesión", "phrase": "Escena cotidiana" },
-        { "image": "assets/uploads/JMC5503.jpg", "alt": "Últimos retratos de la sesión", "phrase": "Últimos retratos" }
+        {
+          "image": "assets/uploads/JMC1596_1-scaled.jpg",
+          "alt": "Retrato de adolescente en estudio",
+          "phrase": "Mirada directa"
+        },
+        {
+          "image": "assets/uploads/xula-2-scaled.jpg",
+          "alt": "Retrato natural de adolescente",
+          "phrase": "Luz de tarde"
+        },
+        {
+          "image": "assets/uploads/berta1-scaled.jpg",
+          "alt": "Retrato de adolescente",
+          "phrase": "Sin poses"
+        },
+        {
+          "image": "assets/uploads/ninos1-1-scaled.jpg",
+          "alt": "Sesión de fotos de niños",
+          "phrase": "Complicidad"
+        },
+        {
+          "image": "assets/uploads/JMC1619-scaled.jpg",
+          "alt": "Retrato de adolescente al aire libre",
+          "phrase": "Retrato al aire libre"
+        },
+        {
+          "image": "assets/uploads/JMC1631_1-1_1-scaled.jpg",
+          "alt": "Retrato espontáneo de adolescente",
+          "phrase": "Instante espontáneo"
+        },
+        {
+          "image": "assets/uploads/Ninos-1-scaled.jpg",
+          "alt": "Sesión familiar con hermanos",
+          "phrase": "En familia"
+        },
+        {
+          "image": "assets/uploads/JMC1650-scaled.jpg",
+          "alt": "Retrato de adolescente con luz natural",
+          "phrase": "Luz natural"
+        },
+        {
+          "image": "assets/uploads/acostada_pelo-1-scaled.jpg",
+          "alt": "Detalle de retrato de adolescente",
+          "phrase": "Detalle y textura"
+        },
+        {
+          "image": "assets/uploads/mirada_mano-1-scaled.jpg",
+          "alt": "Retrato con gesto espontáneo",
+          "phrase": "Gesto espontáneo"
+        },
+        {
+          "image": "assets/uploads/Caucasian-girl-stretched-with-her-hand-on-her-head-and-eyes-closed-curly-hair-scaled.jpg",
+          "alt": "Retrato de adolescente estirándose",
+          "phrase": "Estiramiento"
+        },
+        {
+          "image": "assets/uploads/Sesion_Rafa-scaled.jpg",
+          "alt": "Retrato sereno de adolescente",
+          "phrase": "Retrato sereno"
+        },
+        {
+          "image": "assets/uploads/JMC5385.jpg",
+          "alt": "Sesión de retrato 2025",
+          "phrase": "Sesión 2025"
+        },
+        {
+          "image": "assets/uploads/JMC5416.jpg",
+          "alt": "Retrato con expresión natural",
+          "phrase": "Expresión natural"
+        },
+        {
+          "image": "assets/uploads/JMC5395.jpg",
+          "alt": "Retrato en movimiento",
+          "phrase": "En movimiento"
+        },
+        {
+          "image": "assets/uploads/JMC5478_1.jpg",
+          "alt": "Retrato mirando al frente",
+          "phrase": "Mirada al frente"
+        },
+        {
+          "image": "assets/uploads/JMC5489.jpg",
+          "alt": "Escena cotidiana de sesión",
+          "phrase": "Escena cotidiana"
+        },
+        {
+          "image": "assets/uploads/JMC5503.jpg",
+          "alt": "Últimos retratos de la sesión",
+          "phrase": "Últimos retratos"
+        }
       ]
     },
     {
@@ -64,19 +156,71 @@
       "ctaLabel": "Consulta disponibilidad",
       "altBackground": true,
       "photos": [
-        { "image": "assets/uploads/Singswingcompany_2022-47-scaled.jpg", "alt": "Sesión de estudio con iluminación controlada", "phrase": "En blanco y negro" },
-        { "image": "assets/uploads/rebeca2-scaled.jpg", "alt": "Retrato de estudio", "phrase": "Luz de ventana" },
-        { "image": "assets/uploads/Noelia-3_1-scaled.jpg", "alt": "Retrato de estudio con fondo neutro", "phrase": "Fondo neutro" },
-        { "image": "assets/uploads/DSC844c9-scaled.jpg", "alt": "Retrato profesional de estudio", "phrase": "Luz controlada" },
-        { "image": "assets/uploads/JMC04319-scaled.jpg", "alt": "Retrato de estudio en blanco y negro", "phrase": "Alto contraste" },
-        { "image": "assets/uploads/JMC3549-Editar.jpg", "alt": "Retrato clásico de estudio", "phrase": "Retrato clásico" },
-        { "image": "assets/uploads/JMC3582-1.jpg", "alt": "Sesión de estudio con dos personas", "phrase": "Dos miradas" },
-        { "image": "assets/uploads/Noelia-2-scaled.jpg", "alt": "Retrato de estudio con fondo oscuro", "phrase": "Fondo oscuro" },
-        { "image": "assets/uploads/JMC3547-Editar-1.jpg", "alt": "Retrato de estudio clásico", "phrase": "Estudio clásico" },
-        { "image": "assets/uploads/JMC3530-1.jpg", "alt": "Retrato sobrio de estudio", "phrase": "Retrato sobrio" },
-        { "image": "assets/uploads/JMC3524-Editar.jpg", "alt": "Composición cuidada de estudio", "phrase": "Composición cuidada" },
-        { "image": "assets/uploads/JMC3620-1.jpg", "alt": "Mirada de estudio", "phrase": "Mirada de estudio" },
-        { "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg", "alt": "Retrato de estudio con iluminación suave", "phrase": "Iluminación suave" }
+        {
+          "image": "assets/uploads/Singswingcompany_2022-47-scaled.jpg",
+          "alt": "Sesión de estudio con iluminación controlada",
+          "phrase": "En blanco y negro"
+        },
+        {
+          "image": "assets/uploads/rebeca2-scaled.jpg",
+          "alt": "Retrato de estudio",
+          "phrase": "Luz de ventana"
+        },
+        {
+          "image": "assets/uploads/Noelia-3_1-scaled.jpg",
+          "alt": "Retrato de estudio con fondo neutro",
+          "phrase": "Fondo neutro"
+        },
+        {
+          "image": "assets/uploads/DSC844c9-scaled.jpg",
+          "alt": "Retrato profesional de estudio",
+          "phrase": "Luz controlada"
+        },
+        {
+          "image": "assets/uploads/JMC04319-scaled.jpg",
+          "alt": "Retrato de estudio en blanco y negro",
+          "phrase": "Alto contraste"
+        },
+        {
+          "image": "assets/uploads/JMC3549-Editar.jpg",
+          "alt": "Retrato clásico de estudio",
+          "phrase": "Retrato clásico"
+        },
+        {
+          "image": "assets/uploads/JMC3582-1.jpg",
+          "alt": "Sesión de estudio con dos personas",
+          "phrase": "Dos miradas"
+        },
+        {
+          "image": "assets/uploads/Noelia-2-scaled.jpg",
+          "alt": "Retrato de estudio con fondo oscuro",
+          "phrase": "Fondo oscuro"
+        },
+        {
+          "image": "assets/uploads/JMC3547-Editar-1.jpg",
+          "alt": "Retrato de estudio clásico",
+          "phrase": "Estudio clásico"
+        },
+        {
+          "image": "assets/uploads/JMC3530-1.jpg",
+          "alt": "Retrato sobrio de estudio",
+          "phrase": "Retrato sobrio"
+        },
+        {
+          "image": "assets/uploads/JMC3524-Editar.jpg",
+          "alt": "Composición cuidada de estudio",
+          "phrase": "Composición cuidada"
+        },
+        {
+          "image": "assets/uploads/JMC3620-1.jpg",
+          "alt": "Mirada de estudio",
+          "phrase": "Mirada de estudio"
+        },
+        {
+          "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg",
+          "alt": "Retrato de estudio con iluminación suave",
+          "phrase": "Iluminación suave"
+        }
       ]
     },
     {
@@ -86,18 +230,67 @@
       "ctaLabel": "Pide presupuesto",
       "altBackground": false,
       "photos": [
-        { "image": "assets/uploads/JMC0712-scaled.jpg", "alt": "Cobertura fotográfica de evento", "phrase": "Encuadre discreto" },
-        { "image": "assets/uploads/DSC7542-1-scaled.jpg", "alt": "Presentación de empresa fotografiada", "phrase": "La presentación" },
-        { "image": "assets/uploads/JMC7680-scaled.jpg", "alt": "Gala de empresa, cobertura fotográfica", "phrase": "Gala de empresa" },
-        { "image": "assets/uploads/JMC7666-scaled.jpg", "alt": "Congreso fotografiado de forma discreta", "phrase": "Un congreso" },
-        { "image": "assets/uploads/uriarch-174.jpg", "alt": "Cobertura de evento de empresa, networking", "phrase": "Networking" },
-        { "image": "assets/uploads/Divendres-Presentacio-2.jpg", "alt": "Presentación de tarde fotografiada", "phrase": "Ambiente de tarde" },
-        { "image": "assets/uploads/JMC4320.jpg", "alt": "Detalle de acto corporativo", "phrase": "Detalle del acto" },
-        { "image": "assets/uploads/Divendres-Presentacio-13.jpg", "alt": "Público atento durante la presentación", "phrase": "Público atento" },
-        { "image": "assets/uploads/Divendres-Presentacio-20.jpg", "alt": "Momento de la charla en el evento", "phrase": "Momento de la charla" },
-        { "image": "assets/uploads/uriarch-91.jpg", "alt": "Sala de actos durante el evento", "phrase": "Sala de actos" },
-        { "image": "assets/uploads/uriarch-140.jpg", "alt": "Encuentro profesional fotografiado", "phrase": "Encuentro profesional" },
-        { "image": "assets/uploads/DSC7533-1-scaled.jpg", "alt": "Inauguración de empresa, fotografía de evento", "phrase": "La inauguración", "wide": true }
+        {
+          "image": "assets/uploads/JMC0712-scaled.jpg",
+          "alt": "Cobertura fotográfica de evento",
+          "phrase": "Encuadre discreto"
+        },
+        {
+          "image": "assets/uploads/DSC7542-1-scaled.jpg",
+          "alt": "Presentación de empresa fotografiada",
+          "phrase": "La presentación"
+        },
+        {
+          "image": "assets/uploads/JMC7680-scaled.jpg",
+          "alt": "Gala de empresa, cobertura fotográfica",
+          "phrase": "Gala de empresa"
+        },
+        {
+          "image": "assets/uploads/JMC7666-scaled.jpg",
+          "alt": "Congreso fotografiado de forma discreta",
+          "phrase": "Un congreso"
+        },
+        {
+          "image": "assets/uploads/uriarch-174.jpg",
+          "alt": "Cobertura de evento de empresa, networking",
+          "phrase": "Networking"
+        },
+        {
+          "image": "assets/uploads/Divendres-Presentacio-2.jpg",
+          "alt": "Presentación de tarde fotografiada",
+          "phrase": "Ambiente de tarde"
+        },
+        {
+          "image": "assets/uploads/JMC4320.jpg",
+          "alt": "Detalle de acto corporativo",
+          "phrase": "Detalle del acto"
+        },
+        {
+          "image": "assets/uploads/Divendres-Presentacio-13.jpg",
+          "alt": "Público atento durante la presentación",
+          "phrase": "Público atento"
+        },
+        {
+          "image": "assets/uploads/Divendres-Presentacio-20.jpg",
+          "alt": "Momento de la charla en el evento",
+          "phrase": "Momento de la charla"
+        },
+        {
+          "image": "assets/uploads/uriarch-91.jpg",
+          "alt": "Sala de actos durante el evento",
+          "phrase": "Sala de actos"
+        },
+        {
+          "image": "assets/uploads/uriarch-140.jpg",
+          "alt": "Encuentro profesional fotografiado",
+          "phrase": "Encuentro profesional"
+        },
+        {
+          "image": "assets/uploads/DSC7533-1-scaled.jpg",
+          "alt": "Inauguración de empresa, fotografía de evento",
+          "phrase": "La inauguración",
+          "wide": true
+        }
       ]
     }
   ],
@@ -113,23 +306,32 @@
     "imageAlt": "Sesión de fotografía de estudio de Juanma Cuevas",
     "imageBadge": "Desde 2011",
     "stats": [
-      { "number": "+13", "label": "años de experiencia" },
-      { "number": "3", "label": "especialidades: retrato, estudio, eventos" },
-      { "number": "1", "label": "base en Vilanova i la Geltrú" }
+      {
+        "number": "+13",
+        "label": "años de experiencia"
+      },
+      {
+        "number": "3",
+        "label": "especialidades: retrato, estudio, eventos"
+      },
+      {
+        "number": "1",
+        "label": "base en Vilanova i la Geltrú"
+      }
     ]
   },
   "contact": {
-    "kicker": "Contacto",
-    "title": "Hablemos de tu proyecto",
-    "description": "Cuéntame qué sesión tienes en mente y te respondo lo antes posible.",
-    "whatsappNumber": "+34 607 22 96 02",
-    "whatsappLink": "https://wa.me/34607229602",
-    "email": "juanma@eltinterdecolors.com",
-    "instagramHandle": "@eltinterdecolors_",
-    "instagramLink": "https://www.instagram.com/eltinterdecolors_/",
     "addressLine1": "C/ Les Roques nº1",
     "addressLine2": "08800 Vilanova i la Geltrú",
-    "mapsLink": "https://maps.app.goo.gl/VzPabU6kB9y1gCKk7"
+    "whatsappLink": "https://wa.me/34607229602",
+    "instagramLink": "https://www.instagram.com/eltinterdecolors_/",
+    "mapsLink": "https://maps.app.goo.gl/VzPabU6kB9y1gCKk7",
+    "kicker": "Contacto",
+    "title": "Hablemos de tu proyecto",
+    "instagramHandle": "@eltinterdecolors_",
+    "whatsappNumber": "+34 607 22 96 02",
+    "email": "juanma@eltinterdecolors.com",
+    "description": "Cuéntame qué sesión tienes en mente y te respondo lo antes posible."
   },
   "footer": {
     "copyright": "© 2026 El Tinter de Colors · Juanma Cuevas. Todos los derechos reservados."
