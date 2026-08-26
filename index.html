@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<script>
-  // Netlify Identity invite/recovery/confirmation links land on the homepage;
-  // forward them to /admin/ so Decap CMS's identity widget can handle the token.
-  (function () {
-    var hash = window.location.hash || '';
-    if (/(invite_token|recovery_token|confirmation_token)=/.test(hash)) {
-      window.location.replace('/admin/' + hash);
-    }
-  })();
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Juanma Cuevas — Fotógrafo de retrato en Vilanova i la Geltrú</title>
@@ -22,6 +12,22 @@
 <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  // Invite/recovery links from Netlify Identity land here with a token in the
+  // URL hash. The widget must handle it directly on this page — redirecting to
+  // /admin/ first lets Decap CMS's own router clobber the hash before the
+  // token is read, which is why the modal never showed up.
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', function (user) {
+      if (!user) {
+        window.netlifyIdentity.on('login', function () {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
 
 <a class="skip-link" href="#main">Ir al contenido</a>
 
