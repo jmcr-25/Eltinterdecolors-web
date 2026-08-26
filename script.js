@@ -49,6 +49,8 @@
       var img = document.createElement('img');
       img.src = slide.image;
       img.alt = '';
+      img.style.objectPosition = slide.focus || 'center';
+      img.className = 'fx-' + (slide.effect || 'zoom-in');
       if (i === 0) img.loading = 'eager';
       div.appendChild(img);
       slidesWrap.appendChild(div);

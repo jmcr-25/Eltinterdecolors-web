@@ -7,5 +7,135 @@
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600;700&display=swap');
+    CMS.registerPreviewStyle('/styles.css');
+
+    var GeneralPreview = createClass({
+      getInitialState: function () {
+        return { device: 'desktop' };
+      },
+      setDevice: function (device) {
+        this.setState({ device: device });
+      },
+      render: function () {
+        var data = this.props.entry.get('data');
+        var get = function (path, fallback) {
+          var v = data.getIn(path);
+          return v === undefined || v === null ? (fallback || '') : v;
+        };
+        var slides = data.getIn(['hero', 'slides']);
+        var firstSlide = slides && slides.size ? slides.get(0) : null;
+        var heroImage = firstSlide ? this.props.getAsset(firstSlide.get('image')) : null;
+        var heroFocus = firstSlide ? firstSlide.get('focus') || 'center' : 'center';
+        var paragraphs = data.getIn(['about', 'paragraphs']);
+        var firstParagraph = paragraphs && paragraphs.size ? paragraphs.get(0) : '';
+        var isMobile = this.state.device === 'mobile';
+
+        var toggleBar = h('div', {
+          style: {
+            position: 'sticky', top: 0, zIndex: 10,
+            display: 'flex', gap: '8px', padding: '10px',
+            background: '#1c1917', fontFamily: 'sans-serif'
+          }
+        },
+          h('button', {
+            onClick: this.setDevice.bind(this, 'desktop'),
+            style: {
+              padding: '6px 14px', borderRadius: '999px', border: 'none', cursor: 'pointer',
+              background: isMobile ? '#3a3530' : '#f7f3ec',
+              color: isMobile ? '#f7f3ec' : '#1c1917',
+              fontWeight: 600
+            }
+          }, '🖥️ Escritorio'),
+          h('button', {
+            onClick: this.setDevice.bind(this, 'mobile'),
+            style: {
+              padding: '6px 14px', borderRadius: '999px', border: 'none', cursor: 'pointer',
+              background: isMobile ? '#f7f3ec' : '#3a3530',
+              color: isMobile ? '#1c1917' : '#f7f3ec',
+              fontWeight: 600
+            }
+          }, '📱 Móvil')
+        );
+
+        var frame = h('div', {
+          style: {
+            width: isMobile ? '390px' : '100%',
+            margin: isMobile ? '20px auto' : '0',
+            border: isMobile ? '8px solid #1c1917' : 'none',
+            borderRadius: isMobile ? '28px' : '0',
+            overflow: 'hidden',
+            boxShadow: isMobile ? '0 10px 30px rgba(0,0,0,0.35)' : 'none'
+          }
+        },
+          h('section', {
+            className: 'hero',
+            style: { height: '70vh', minHeight: '420px' }
+          },
+            heroImage ? h('div', {
+              style: {
+                position: 'absolute', inset: 0,
+                backgroundImage: 'url(' + heroImage + ')',
+                backgroundSize: 'cover',
+                backgroundPosition: heroFocus
+              }
+            }) : null,
+            h('div', { className: 'hero-content' },
+              h('span', { className: 'kicker' }, get(['hero', 'kicker'])),
+              h('h1', {},
+                get(['hero', 'title']) + ' ',
+                h('em', { style: { fontStyle: 'italic' } }, get(['hero', 'titleEmphasis'])),
+                '.'
+              ),
+              h('p', {}, get(['hero', 'subtitle']))
+            )
+          ),
+          h('section', { className: 'philosophy' },
+            h('div', { className: 'container' },
+              h('blockquote', {},
+                get(['philosophy', 'quoteBefore']),
+                h('span', {}, get(['philosophy', 'quoteHighlight'])),
+                get(['philosophy', 'quoteAfter'])
+              ),
+              h('cite', {}, get(['philosophy', 'cite']))
+            )
+          ),
+          h('section', { className: 'section-pad' },
+            h('div', { className: 'container' },
+              h('div', { className: 'section-head' },
+                h('span', { className: 'kicker' }, get(['portfolioIntro', 'kicker'])),
+                h('h2', {}, get(['portfolioIntro', 'title'])),
+                h('p', {}, get(['portfolioIntro', 'description']))
+              )
+            )
+          ),
+          h('section', { className: 'section-pad about' },
+            h('div', { className: 'container' },
+              h('div', { className: 'section-head' },
+                h('span', { className: 'kicker' }, get(['about', 'kicker'])),
+                h('h2', {}, get(['about', 'title'])),
+                h('p', {}, firstParagraph)
+              )
+            )
+          ),
+          h('section', { className: 'section-pad contact' },
+            h('div', { className: 'container' },
+              h('div', { className: 'section-head center' },
+                h('span', { className: 'kicker' }, get(['contact', 'kicker'])),
+                h('h2', {}, get(['contact', 'title'])),
+                h('p', {}, get(['contact', 'description']))
+              )
+            )
+          )
+        );
+
+        return h('div', { style: { background: '#110e0c', minHeight: '100%' } }, toggleBar, frame);
+      }
+    });
+
+    CMS.registerPreviewTemplate('general', GeneralPreview);
+    CMS.registerPreviewTemplate('site', GeneralPreview);
+  </script>
 </body>
 </html>
