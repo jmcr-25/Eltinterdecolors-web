@@ -356,7 +356,7 @@
     }
   }
 
-  fetch('content/site.json')
+  fetch('content/site.json?t=' + Date.now(), { cache: 'no-store' })
     .then(function (res) { return res.json(); })
     .then(function (data) {
       document.title = data.meta.title;
