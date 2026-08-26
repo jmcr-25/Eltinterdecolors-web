@@ -11,11 +11,11 @@
     "ctaPrimaryLabel": "Contacta conmigo",
     "ctaSecondaryLabel": "Ver portfolio",
     "slides": [
-      { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Singswingcompany_2022-46-scaled.jpg" },
-      { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/Noelia-2-scaled.jpg" },
-      { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/rebeca3.webp" },
-      { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/mirada_mano-1-scaled.jpg" },
-      { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/DSC0776-Editar-Editar-scaled.jpg" }
+      { "image": "assets/uploads/Singswingcompany_2022-46-scaled.jpg" },
+      { "image": "assets/uploads/Noelia-2-2025-scaled.jpg" },
+      { "image": "assets/uploads/rebeca3.webp" },
+      { "image": "assets/uploads/mirada_mano-1-scaled.jpg" },
+      { "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg" }
     ]
   },
   "philosophy": {
@@ -37,24 +37,24 @@
       "ctaLabel": "Reserva tu sesión",
       "altBackground": false,
       "photos": [
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC1596_1-scaled.jpg", "alt": "Retrato de adolescente en estudio", "phrase": "Mirada directa" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/xula-2-scaled.jpg", "alt": "Retrato natural de adolescente", "phrase": "Luz de tarde" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/berta1-scaled.jpg", "alt": "Retrato de adolescente", "phrase": "Sin poses" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/ninos1-1-scaled.jpg", "alt": "Sesión de fotos de niños", "phrase": "Complicidad" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC1619-scaled.jpg", "alt": "Retrato de adolescente al aire libre", "phrase": "Retrato al aire libre" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC1631_1-1_1-scaled.jpg", "alt": "Retrato espontáneo de adolescente", "phrase": "Instante espontáneo" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Ninos-1-scaled.jpg", "alt": "Sesión familiar con hermanos", "phrase": "En familia" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC1650-scaled.jpg", "alt": "Retrato de adolescente con luz natural", "phrase": "Luz natural" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/acostada_pelo-1-scaled.jpg", "alt": "Detalle de retrato de adolescente", "phrase": "Detalle y textura" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/mirada_mano-1-scaled.jpg", "alt": "Retrato con gesto espontáneo", "phrase": "Gesto espontáneo" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Caucasian-girl-stretched-with-her-hand-on-her-head-and-eyes-closed-curly-hair-scaled.jpg", "alt": "Retrato de adolescente estirándose", "phrase": "Estiramiento" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Sesion_Rafa-scaled.jpg", "alt": "Retrato sereno de adolescente", "phrase": "Retrato sereno" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/JMC5385.jpg", "alt": "Sesión de retrato 2025", "phrase": "Sesión 2025" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/JMC5416.jpg", "alt": "Retrato con expresión natural", "phrase": "Expresión natural" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/JMC5395.jpg", "alt": "Retrato en movimiento", "phrase": "En movimiento" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/JMC5478_1.jpg", "alt": "Retrato mirando al frente", "phrase": "Mirada al frente" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/JMC5489.jpg", "alt": "Escena cotidiana de sesión", "phrase": "Escena cotidiana" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/JMC5503.jpg", "alt": "Últimos retratos de la sesión", "phrase": "Últimos retratos" }
+        { "image": "assets/uploads/JMC1596_1-scaled.jpg", "alt": "Retrato de adolescente en estudio", "phrase": "Mirada directa" },
+        { "image": "assets/uploads/xula-2-scaled.jpg", "alt": "Retrato natural de adolescente", "phrase": "Luz de tarde" },
+        { "image": "assets/uploads/berta1-scaled.jpg", "alt": "Retrato de adolescente", "phrase": "Sin poses" },
+        { "image": "assets/uploads/ninos1-1-scaled.jpg", "alt": "Sesión de fotos de niños", "phrase": "Complicidad" },
+        { "image": "assets/uploads/JMC1619-scaled.jpg", "alt": "Retrato de adolescente al aire libre", "phrase": "Retrato al aire libre" },
+        { "image": "assets/uploads/JMC1631_1-1_1-scaled.jpg", "alt": "Retrato espontáneo de adolescente", "phrase": "Instante espontáneo" },
+        { "image": "assets/uploads/Ninos-1-scaled.jpg", "alt": "Sesión familiar con hermanos", "phrase": "En familia" },
+        { "image": "assets/uploads/JMC1650-scaled.jpg", "alt": "Retrato de adolescente con luz natural", "phrase": "Luz natural" },
+        { "image": "assets/uploads/acostada_pelo-1-scaled.jpg", "alt": "Detalle de retrato de adolescente", "phrase": "Detalle y textura" },
+        { "image": "assets/uploads/mirada_mano-1-scaled.jpg", "alt": "Retrato con gesto espontáneo", "phrase": "Gesto espontáneo" },
+        { "image": "assets/uploads/Caucasian-girl-stretched-with-her-hand-on-her-head-and-eyes-closed-curly-hair-scaled.jpg", "alt": "Retrato de adolescente estirándose", "phrase": "Estiramiento" },
+        { "image": "assets/uploads/Sesion_Rafa-scaled.jpg", "alt": "Retrato sereno de adolescente", "phrase": "Retrato sereno" },
+        { "image": "assets/uploads/JMC5385.jpg", "alt": "Sesión de retrato 2025", "phrase": "Sesión 2025" },
+        { "image": "assets/uploads/JMC5416.jpg", "alt": "Retrato con expresión natural", "phrase": "Expresión natural" },
+        { "image": "assets/uploads/JMC5395.jpg", "alt": "Retrato en movimiento", "phrase": "En movimiento" },
+        { "image": "assets/uploads/JMC5478_1.jpg", "alt": "Retrato mirando al frente", "phrase": "Mirada al frente" },
+        { "image": "assets/uploads/JMC5489.jpg", "alt": "Escena cotidiana de sesión", "phrase": "Escena cotidiana" },
+        { "image": "assets/uploads/JMC5503.jpg", "alt": "Últimos retratos de la sesión", "phrase": "Últimos retratos" }
       ]
     },
     {
@@ -64,19 +64,19 @@
       "ctaLabel": "Consulta disponibilidad",
       "altBackground": true,
       "photos": [
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/Singswingcompany_2022-47-scaled.jpg", "alt": "Sesión de estudio con iluminación controlada", "phrase": "En blanco y negro" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/rebeca2-scaled.jpg", "alt": "Retrato de estudio", "phrase": "Luz de ventana" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/Noelia-3_1-scaled.jpg", "alt": "Retrato de estudio con fondo neutro", "phrase": "Fondo neutro" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/DSC844c9-scaled.jpg", "alt": "Retrato profesional de estudio", "phrase": "Luz controlada" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/JMC04319-scaled.jpg", "alt": "Retrato de estudio en blanco y negro", "phrase": "Alto contraste" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/JMC3549-Editar.jpg", "alt": "Retrato clásico de estudio", "phrase": "Retrato clásico" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/JMC3582-1.jpg", "alt": "Sesión de estudio con dos personas", "phrase": "Dos miradas" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/Noelia-2-scaled.jpg", "alt": "Retrato de estudio con fondo oscuro", "phrase": "Fondo oscuro" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/JMC3547-Editar-1.jpg", "alt": "Retrato de estudio clásico", "phrase": "Estudio clásico" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/JMC3530-1.jpg", "alt": "Retrato sobrio de estudio", "phrase": "Retrato sobrio" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/JMC3524-Editar.jpg", "alt": "Composición cuidada de estudio", "phrase": "Composición cuidada" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/05/JMC3620-1.jpg", "alt": "Mirada de estudio", "phrase": "Mirada de estudio" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2025/06/DSC0776-Editar-Editar-scaled.jpg", "alt": "Retrato de estudio con iluminación suave", "phrase": "Iluminación suave" }
+        { "image": "assets/uploads/Singswingcompany_2022-47-scaled.jpg", "alt": "Sesión de estudio con iluminación controlada", "phrase": "En blanco y negro" },
+        { "image": "assets/uploads/rebeca2-scaled.jpg", "alt": "Retrato de estudio", "phrase": "Luz de ventana" },
+        { "image": "assets/uploads/Noelia-3_1-scaled.jpg", "alt": "Retrato de estudio con fondo neutro", "phrase": "Fondo neutro" },
+        { "image": "assets/uploads/DSC844c9-scaled.jpg", "alt": "Retrato profesional de estudio", "phrase": "Luz controlada" },
+        { "image": "assets/uploads/JMC04319-scaled.jpg", "alt": "Retrato de estudio en blanco y negro", "phrase": "Alto contraste" },
+        { "image": "assets/uploads/JMC3549-Editar.jpg", "alt": "Retrato clásico de estudio", "phrase": "Retrato clásico" },
+        { "image": "assets/uploads/JMC3582-1.jpg", "alt": "Sesión de estudio con dos personas", "phrase": "Dos miradas" },
+        { "image": "assets/uploads/Noelia-2-scaled.jpg", "alt": "Retrato de estudio con fondo oscuro", "phrase": "Fondo oscuro" },
+        { "image": "assets/uploads/JMC3547-Editar-1.jpg", "alt": "Retrato de estudio clásico", "phrase": "Estudio clásico" },
+        { "image": "assets/uploads/JMC3530-1.jpg", "alt": "Retrato sobrio de estudio", "phrase": "Retrato sobrio" },
+        { "image": "assets/uploads/JMC3524-Editar.jpg", "alt": "Composición cuidada de estudio", "phrase": "Composición cuidada" },
+        { "image": "assets/uploads/JMC3620-1.jpg", "alt": "Mirada de estudio", "phrase": "Mirada de estudio" },
+        { "image": "assets/uploads/DSC0776-Editar-Editar-scaled.jpg", "alt": "Retrato de estudio con iluminación suave", "phrase": "Iluminación suave" }
       ]
     },
     {
@@ -86,18 +86,18 @@
       "ctaLabel": "Pide presupuesto",
       "altBackground": false,
       "photos": [
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC0712-scaled.jpg", "alt": "Cobertura fotográfica de evento", "phrase": "Encuadre discreto" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/DSC7542-1-scaled.jpg", "alt": "Presentación de empresa fotografiada", "phrase": "La presentación" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC7680-scaled.jpg", "alt": "Gala de empresa, cobertura fotográfica", "phrase": "Gala de empresa" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC7666-scaled.jpg", "alt": "Congreso fotografiado de forma discreta", "phrase": "Un congreso" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/uriarch-174.jpg", "alt": "Cobertura de evento de empresa, networking", "phrase": "Networking" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Divendres-Presentacio-2.jpg", "alt": "Presentación de tarde fotografiada", "phrase": "Ambiente de tarde" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/JMC4320.jpg", "alt": "Detalle de acto corporativo", "phrase": "Detalle del acto" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Divendres-Presentacio-13.jpg", "alt": "Público atento durante la presentación", "phrase": "Público atento" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Divendres-Presentacio-20.jpg", "alt": "Momento de la charla en el evento", "phrase": "Momento de la charla" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/uriarch-91.jpg", "alt": "Sala de actos durante el evento", "phrase": "Sala de actos" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/uriarch-140.jpg", "alt": "Encuentro profesional fotografiado", "phrase": "Encuentro profesional" },
-        { "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/DSC7533-1-scaled.jpg", "alt": "Inauguración de empresa, fotografía de evento", "phrase": "La inauguración", "wide": true }
+        { "image": "assets/uploads/JMC0712-scaled.jpg", "alt": "Cobertura fotográfica de evento", "phrase": "Encuadre discreto" },
+        { "image": "assets/uploads/DSC7542-1-scaled.jpg", "alt": "Presentación de empresa fotografiada", "phrase": "La presentación" },
+        { "image": "assets/uploads/JMC7680-scaled.jpg", "alt": "Gala de empresa, cobertura fotográfica", "phrase": "Gala de empresa" },
+        { "image": "assets/uploads/JMC7666-scaled.jpg", "alt": "Congreso fotografiado de forma discreta", "phrase": "Un congreso" },
+        { "image": "assets/uploads/uriarch-174.jpg", "alt": "Cobertura de evento de empresa, networking", "phrase": "Networking" },
+        { "image": "assets/uploads/Divendres-Presentacio-2.jpg", "alt": "Presentación de tarde fotografiada", "phrase": "Ambiente de tarde" },
+        { "image": "assets/uploads/JMC4320.jpg", "alt": "Detalle de acto corporativo", "phrase": "Detalle del acto" },
+        { "image": "assets/uploads/Divendres-Presentacio-13.jpg", "alt": "Público atento durante la presentación", "phrase": "Público atento" },
+        { "image": "assets/uploads/Divendres-Presentacio-20.jpg", "alt": "Momento de la charla en el evento", "phrase": "Momento de la charla" },
+        { "image": "assets/uploads/uriarch-91.jpg", "alt": "Sala de actos durante el evento", "phrase": "Sala de actos" },
+        { "image": "assets/uploads/uriarch-140.jpg", "alt": "Encuentro profesional fotografiado", "phrase": "Encuentro profesional" },
+        { "image": "assets/uploads/DSC7533-1-scaled.jpg", "alt": "Inauguración de empresa, fotografía de evento", "phrase": "La inauguración", "wide": true }
       ]
     }
   ],
@@ -109,7 +109,7 @@
       "A lo largo de los años he sido testigo de la evolución de la tecnología fotográfica, y sigo formándome para mantenerme al día con las últimas técnicas. Trabajo desde Vilanova i la Geltrú y me desplazo por toda la comarca del Garraf y alrededores."
     ],
     "ctaLabel": "Hablemos de tu proyecto",
-    "image": "https://www.eltinterdecolors.com/wp-content/uploads/2023/06/Sesion-Rafa-scaled.jpg",
+    "image": "assets/uploads/Sesion-Rafa-scaled.jpg",
     "imageAlt": "Sesión de fotografía de estudio de Juanma Cuevas",
     "imageBadge": "Desde 2011",
     "stats": [
